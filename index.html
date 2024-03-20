@@ -3,21 +3,27 @@
 <head>
     <title>craft</title>
     <style>
-        .redirect-button {
-            position: fixed;
-            top: 0px;
-            left: 0px;
-            z-index: 999999;
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-        }
-    </style>
+.custom-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+</style>
+
+<button class="custom-button" onclick="javascript:(function()%7B/* Your JavaScript Code Here */})()">Click Me</button>
+
 </head>
 <body>
     <iframe src="https://neal.fun/infinite-craft/" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;"></iframe>
-<button onclick="javascript:(function()%7Blet%20doesExists%20%3D%20localStorage.getItem(%22infinite-craft-data%22)%0Alet%20confirmed%0Alet%20replace%20%3D%20'%7B%22elements%22%3A%5B%7B%22text%22%3A%22Water%22%2C%22emoji%22%3A%22💧%22%2C%22discovered%22%3Afalse%7D%2C%7B%22text%22%3A%22Fire%22%2C%22emoji%22%3A%22🔥%22%2C%22discovered%22%3Afalse%7D%2C%7B%22text%22%3A%22Wind%22%2C%22emoji%22%3A%22🌬%EF%B8%8F%22%2C%22discovered%22%3Afalse%7D%2C%7B%22text%22%3A%22Earth%22%2C%22emoji%22%3A%22🌍%22%2C%22discovered%22%3Afalse%7D%5D%7D'%0Aif%20(doesExists%20%3D%3D%20null)%20%7B%0A%09localStorage.setItem(%22infinite-craft-data%22%2C%20replace)%3B%0A%0A%7D%0Alet%20initial%20%3D%20localStorage.getItem(%22infinite-craft-data%22)%3B%0Alet%20array%20%3D%20JSON.parse(initial).elements%0Alet%20text%20%3D%20prompt(%22What%20is%20the%20name%20of%20the%20item%3F%22)%3B%0Alet%20emoji%20%3D%20prompt(%22What%20should%20the%20emoji%20be%20for%20the%20item%3F%20Hint%3A%20Press%20Windows%20%2B%20.%20%22)%3B%0Alet%20discovered%20%3D%20confirm(%22Should%20the%20item%20be%20a%20first%20discovery%3F%22)%3B%0Alet%20ItemsToAdd%20%3D%20%7B%0A%20%20text%3A%20text%2C%0A%20%20emoji%3A%20emoji%2C%0A%20%20discovered%3A%20discovered%0A%7D%3B%0Aarray.push(ItemsToAdd)%0Alet%20newItem%20%3D%20%7B%0A%09elements%3A%20array%0A%7D%3B%0A%0Aarray%20%3D%20JSON.stringify(newItem)%0Aconfirmed%20%3D%20confirm(%22Are%20you%20sure%3F%20This%20CANNOT%20be%20easily%20undone!%22)%3B%0Aif%20(confirmed%20%3D%3D%20true)%20%7B%0A%09localStorage.setItem(%22infinite-craft-data%22%2C%20array)%3B%0A%09alert(%22Reloading!%22)%0A%09window.location.reload()%3B%0A%7D%0Aconsole.log(%22DONE%22)%3B%7D)()">Click to Manipulate Data</button>
+<iframe style="float: left; margin-right: 20px;" src="about:blank" width="300" height="200"></iframe>
+<button onclick="javascript:(function()%7Blet%20doesExists%20%3D%20localStorage.getItem(%22infinite-craft-data%22)%0Alet%20confirmed%0Alet%20replace%20%3D%20'%7B%22elements%22%3A%5B%7B%22text%22%3A%22Water%22%2C%22emoji%22%3A%22💧%22%2C%22discovered%22%3Afalse%7D%2C%7B%22text%22%3A%22Fire%22%2C%22emoji%22%3A%22🔥%22%2C%22discovered%22%3Afalse%7D%2C%7B%22text%22%3A%22Wind%22%2C%22emoji%22%3A%22🌬%EF%B8%8F%22%2C%22discovered%22%3Afalse%7D%2C%7B%22text%22%3A%22Earth%22%2C%22emoji%22%3A%22🌍%22%2C%22discovered%22%3Afalse%7D%5D%7D'%0Aif%20(doesExists%20%3D%3D%20null)%20%7B%0A%09localStorage.setItem(%22infinite-craft-data%22%2C%20replace)%3B%0A%0A%7D%0Alet%20initial%20%3D%20localStorage.getItem(%22infinite-craft-data%22)%3B%0Alet%20array%20%3D%20JSON.parse(initial).elements%0Alet%20text%20%3D%20prompt(%22What%20is%20the%20name%20of%20the%20item%3F%22)%3B%0Alet%20emoji%20%3D%20prompt(%22What%20should%20the%20emoji%20be%20for%20the%20item%3F%20Hint%3A%20Press%20Windows%20%2B%20.%20%22)%3B%0Alet%20discovered%20%3D%20confirm(%22Should%20the%20item%20be%20a%20first%20discovery%3F%22)%3B%0Alet%20ItemsToAdd%20%3D%20%7B%0A%20%20text%3A%20text%2C%0A%20%20emoji%3A%20emoji%2C%0A%20%20discovered%3A%20discovered%0A%7D%3B%0Aarray.push(ItemsToAdd)%0Alet%20newItem%20%3D%20%7B%0A%09elements%3A%20array%0A%7D%3B%0Aarray%20%3D%20JSON.stringify(newItem)%0Aconfirmed%20%3D%20confirm(%22Are%20you%20sure%3F%20This%20CANNOT%20be%20easily%20undone!%22)%3B%0Aif%20(confirmed%20%3D%3D%20true)%20%7B%0A%09localStorage.setItem(%22infinite-craft-data%22%2C%20array)%3B%0A%09alert(%22Reloading!%22)%0A%09window.location.reload()%3B%0A%7D%0Aconsole.log(%22DONE%22)%3B%7D)()">Click to Manipulate Data</button>
+
 </body>
 </html>
